@@ -1,61 +1,78 @@
-.container {
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400&display=swap");
 
-  margin: 0 auto;
-  background-color: hsl(212, 45%, 89%);
-  width: 1440px;
-  padding-top: 10%;
-  padding-bottom: 10%;
-
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
 }
 
+:root {
+	font-family: "Outfit", sans-serif;
+	font-optical-sizing: auto;
+	font-style: normal;
+	--primaryClr-100: hsl(0, 0%, 100%);
+	--primaryClr-300: hsl(212, 45%, 89%);
+	--textClr-500: rgb(151, 151, 151);
+	--textClr-800: rgb(67, 67, 98);
+}
+
+body {
+	min-height: 100dvh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: var(--primaryClr-300);
+}
+
+main {
+	display: flex;
+	flex-direction: column;
+	background-color: var(--primaryClr-100);
+	height: 498px;
+	width: 322px;
+	border-radius: 1rem;
+	box-shadow: 0 6px 30px rgb(0 0 0 / 0.2);
+}
 .qr-container {
-  
-  background-color: hsl(0, 0%, 100%);
-  height: 440px;
-  width: 280px;
-  border-radius: 5%;
-  margin: 0 auto;
-  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+	width: 100;
 }
-
-.qr-container img {
-
-  border-radius: 24px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 90%;
-
-}
-
 img {
-
-  padding: 15px;
-
-
-}
-
-.heading {
-  font-family: "Outfit", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 20px;
-  margin-top: 5px;
- padding: 0 15px 0 15px ;
-  
-  text-align: center;
-
+	border-radius: 24px;
+	padding: 15px;
+	width: 100%;
 }
 
 .text {
-  font-family: "Outfit", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 14px;
-  padding: 18px;
-  text-align: center;
-  color: rgb(151, 151, 151);
+	padding: 0 22px 0 22px;
+	padding-bottom: 2.5rem;
 }
 
+h1,
+.text {
+	text-align: center;
+	max-width: 100%;
+}
+h1 {
+	font-weight: 700;
+	padding: 0 10px 0 10px;
+	font-size: 22px;
+	margin-top: 5px;
+	color: var(--textClr-800);
+	margin-bottom: 1rem;
+}
+
+p {
+	font-weight: 400;
+	font-size: 16px;
+	padding: 0 5px 0 5px;
+	color: var(--textClr-500);
+}
+
+/* -----------MOBILE----------- */
+
+@media screen and (max-width: 375px) {
+	main {
+		box-shadow: 0 3px 18px rgb(0 0 0 / 0.2);
+	}
+}
